@@ -109,6 +109,11 @@
         'provider' => 'users',
         'hash' => false,
       ),
+      'admin_api' => 
+      array (
+        'driver' => 'jwt',
+        'provider' => 'admins',
+      ),
       'sanctum' => 
       array (
         'driver' => 'sanctum',
