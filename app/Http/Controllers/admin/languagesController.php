@@ -8,9 +8,10 @@ use Exception;
 use Illuminate\Http\Requests\Request;
 // use Illuminate\Support\Facades\App\Http\Request;
 // use authorize;/
+define('pagination_count',10);
 class languagesController extends Controller
 {
-//  ######################start index language function ############### 
+//  ######################start index language function ###############
     public function index(){
         $languages=language::select()->paginate(pagination_count);
         return view('admin.languages.index',compact('languages'));
@@ -34,7 +35,7 @@ class languagesController extends Controller
     //     $language = language::select()->find($id);
     //     if(!$language) {return redirect() -> route('admin.languages');}
     //     // return view('admin.languages.edit');
-    //     }catch(\Exception $ex){ 
+    //     }catch(\Exception $ex){
 
     //         return $ex;
     //     }
@@ -59,4 +60,4 @@ class languagesController extends Controller
         return view('admin.languages.index',compact('languages'));
     }
 // ############################################################
-}// end parent class 
+}// end parent class

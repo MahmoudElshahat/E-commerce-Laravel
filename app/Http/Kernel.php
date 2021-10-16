@@ -49,7 +49,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\HandleInertiaRequests::class,
         ],
-      
+
         'api' => [
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
@@ -73,5 +73,9 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        // ############## api jwt middleware #############
+        'check_pass' => \App\Http\Middleware\checkpasswor::class,
+        'change_lang' => \App\Http\Middleware\change_language::class,
+        'checkAdmin_token' => \App\Http\Middleware\check_admin_token::class,
     ];
 }

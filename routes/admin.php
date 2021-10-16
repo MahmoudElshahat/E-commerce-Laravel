@@ -20,7 +20,7 @@ use App\Http\Controllers\admin\languagesController;
 |
 */
 // ################## start admin Dashboard routes ######################
-define('pagination_count',10);
+// define('pagination_count',10);
 Route::group(['namespace' => 'admin','middleware' => 'auth:admin'], function () {
     Route::get('/', 'dashboardController@index')->name('admin.dashboard');
 
@@ -32,7 +32,7 @@ Route::group(['prefix'=>'languages'],function(){
     Route::get('edit/{id}','languagesController@edit')->name('lang.edite');
     Route::post('update/{id}','languagesController@update')->name('lang.update');
 });
-   
+
 }
 // >>>>>> end language route <<<<<<<<<<<<<<<<<
 
@@ -44,10 +44,10 @@ Route::group(['prefix'=>'languages'],function(){
 Route::group(['namespace'=>'admin','middleware' => 'guest:admin'], function () {
     Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
     Route::post('login', 'LoginController@login')->name('admin.login');
-    
+
     Route::get('backHome','LoginController@backhome')->name('backhome');
 
-});   
+});
 ###################   ####################
 
 

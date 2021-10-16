@@ -8,7 +8,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 // use Eloquent;
 use Illuminate\Support\Facades\Eloquent;
-class language extends Authenticatable
+use Tymon\JWTAuth\Contracts\JWTSubject;
+class language extends Authenticatable implements jwtSubject
 {
     use HasFactory ;
     use Notifiable;
@@ -19,7 +20,7 @@ class language extends Authenticatable
      */
     protected $table='languages';
     protected $fillable = [
-        'id','name','abbr','native','active','direction','local','Created_at','updated_at',
+        'id','name_ar','name_en','abbr','native','active','direction','local','Created_at','updated_at',
     ];
     // ########################################
     public function scopeActive($query){
@@ -27,12 +28,23 @@ class language extends Authenticatable
     }
     public function scopeselection($query){
 
-        return $query->select('name','abbr','direction','active');
+        return $query->select('name_ar','name_en','abbr','direction','active');
 
 
     }
 
-  // #############################################
+  // ########################## jwt abstract function ###################
+public function getJWTIdentifier()
+{
+
+}
+
+// ===============================
+public function getJWTCustomClaims()
+{
+return[];
+}
+//   #################3
 
     /**
      * The attributes that should be hidden for arrays.

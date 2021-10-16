@@ -15,9 +15,14 @@ use App\Http\Controllers\api\mainCategoryController;
 |
 */
 
-Route::group(['middleware'=> 'api','namespace'=>'App\Http\Controllers\api'],function(){
+Route::group(['middleware'=> ['api','checkAdmin_token','check_pass','change_lang'],'namespace'=>'App\Http\Controllers\api'],function(){
     Route::post('send','mainCategoryController@index');
-
-
+    Route::post('get_category_byid','mainCategoryController@get_cate_byid');
+    Route::post('update_data','mainCategoryController@change_status');
 });
+// ########### admin-Api route ####################
+// Route::group(['middleware'=>['api',,'checkAdmin_token'],'namespace'=>'api'],function(){
+
+// });
+// ###############
 // Auth::routes();
