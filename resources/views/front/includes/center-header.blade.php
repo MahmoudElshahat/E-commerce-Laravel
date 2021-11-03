@@ -1,7 +1,7 @@
 <!--
 Lower Header Section
 -->
-<div class="container">
+{{-- <div class="container">
     <div id="gototop"> </div>
     <header id="header">
         <div class="row">
@@ -29,4 +29,4 @@ Lower Header Section
             </div>
         </div>
 
-    </header>
+    </header> --}}

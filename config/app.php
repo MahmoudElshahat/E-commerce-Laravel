@@ -172,11 +172,16 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        // ################ api
+        'Tymon\JWTAuth\Providers\LaravelServiceProvider',
+        // ####################image
+        // Intervention\Image\ImageServiceProvider::class,
+
 
     ],
 
@@ -231,8 +236,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        //##################3
-        'Auth' => Illuminate\Support\Facades\Auth::class,
+        //################## api
+        // 'Auth' => Illuminate\Support\Facades\Auth::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+        // ######### image
+        // 'Image' => Intervention\Image\Facades\Image::class,
+
     ],
 
 ];

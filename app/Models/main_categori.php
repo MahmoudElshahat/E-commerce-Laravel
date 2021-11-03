@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 // use Illuminate\suppert\facades\eloquent;
-class admin extends Authenticatable
+class main_categori extends Authenticatable
 {
     use HasFactory ;
     use Notifiable;
@@ -18,15 +18,19 @@ class admin extends Authenticatable
      */
     protected $table='main_categories';
     protected $fillable = [
-        'id','translation_language','translation_of','slug','active','photo','Created_at','updated_at',
+        'id','name','image_path','translation_language','translation_of','slug','active','photo','Created_at','updated_at',
     ];
       // ########################################
         public function scope_active($query){
             return $query->where('active',1);
         }
 
+      // ############# select function ################################
+      public function scopeselection($query){
+          return $query->select('id','name','active','slug','image_path',);
+      }
 
-      // #############################################
+    // ###############################################3
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -45,6 +49,6 @@ class admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-  
+
 }
 

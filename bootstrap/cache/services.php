@@ -40,10 +40,12 @@
     36 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
     37 => 'App\\Providers\\AppServiceProvider',
     38 => 'App\\Providers\\AuthServiceProvider',
-    39 => 'App\\Providers\\EventServiceProvider',
-    40 => 'App\\Providers\\RouteServiceProvider',
-    41 => 'App\\Providers\\FortifyServiceProvider',
-    42 => 'App\\Providers\\JetstreamServiceProvider',
+    39 => 'App\\Providers\\BroadcastServiceProvider',
+    40 => 'App\\Providers\\EventServiceProvider',
+    41 => 'App\\Providers\\RouteServiceProvider',
+    42 => 'App\\Providers\\FortifyServiceProvider',
+    43 => 'App\\Providers\\JetstreamServiceProvider',
+    44 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
   ),
   'eager' => 
   array (
@@ -72,10 +74,12 @@
     22 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
     23 => 'App\\Providers\\AppServiceProvider',
     24 => 'App\\Providers\\AuthServiceProvider',
-    25 => 'App\\Providers\\EventServiceProvider',
-    26 => 'App\\Providers\\RouteServiceProvider',
-    27 => 'App\\Providers\\FortifyServiceProvider',
-    28 => 'App\\Providers\\JetstreamServiceProvider',
+    25 => 'App\\Providers\\BroadcastServiceProvider',
+    26 => 'App\\Providers\\EventServiceProvider',
+    27 => 'App\\Providers\\RouteServiceProvider',
+    28 => 'App\\Providers\\FortifyServiceProvider',
+    29 => 'App\\Providers\\JetstreamServiceProvider',
+    30 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
   ),
   'deferred' => 
   array (

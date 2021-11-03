@@ -57,7 +57,7 @@
                                                             <input type="text" value="" id="name"
                                                                    class="form-control"
                                                                    placeholder="ادخل اسم اللغة  "
-                                                                   name="name">
+                                                                   name="name_en">
                                                             @error('name')
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
@@ -102,15 +102,15 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group mt-1">
-                                                            <input type="checkbox" 
-                                                    
-                                                             name="active" 
-                
-                                                             @if ('checked'==true) value="1" @endif 
+                                                            <input type="checkbox"
+
+                                                             name="active"
+
+                                                             @if ('checked'==true) value="1" @endif
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
                                                                   />
-                                                           
+
                                                             <label for="switcheryColor4"
                                                                    class="card-title ml-1">الحالة </label>
 

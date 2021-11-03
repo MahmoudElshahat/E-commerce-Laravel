@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="content-body">
-                
+
                 <!-- DOM - jQuery events table -->
                 <section id="dom">
                     <div class="row">
@@ -60,18 +60,18 @@
                                             @isset($languages)
                                                 @foreach($languages as $language)
                                                     <tr>
-                                                        <td>{{$language -> name}}</td>
+                                                        <td>{{$language -> name_en}}</td>
                                                         <td>{{$language -> abbr}}</td>
                                                         <td>{{$language -> direction}}</td>
                                                         <td>{{$language -> active}}</td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('lang.edite',$language -> id)}}"
+                                                                <a href="{{route('admin.languages.edite',$language -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
 
 
-                                                                <a href="????"
+                                                                <a href="{{route('admin.languages.delete',$language -> id)}}"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
 
 

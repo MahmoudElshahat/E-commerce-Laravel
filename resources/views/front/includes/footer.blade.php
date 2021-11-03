@@ -1,61 +1,101 @@
-<!--
-Footer
--->
-<footer class="footer">
-    <div class="row-fluid">
-        <div class="span2">
-            <h5>Your Account</h5>
-            <a href="#">YOUR ACCOUNT</a><br>
-            <a href="#">PERSONAL INFORMATION</a><br>
-            <a href="#">ADDRESSES</a><br>
-            <a href="#">DISCOUNT</a><br>
-            <a href="#">ORDER HISTORY</a><br>
-        </div>
-        <div class="span2">
-            <h5>Iinformation</h5>
-            <a href="contact.html">CONTACT</a><br>
-            <a href="#">SITEMAP</a><br>
-            <a href="#">LEGAL NOTICE</a><br>
-            <a href="#">TERMS AND CONDITIONS</a><br>
-            <a href="#">ABOUT US</a><br>
-        </div>
-        <div class="span2">
-            <h5>Our Offer</h5>
-            <a href="#">NEW PRODUCTS</a> <br>
-            <a href="#">TOP SELLERS</a><br>
-            <a href="#">SPECIALS</a><br>
-            <a href="#">MANUFACTURERS</a><br>
-            <a href="#">SUPPLIERS</a> <br/>
-        </div>
-        <div class="span6">
-            <h5>The standard chunk of Lorem</h5>
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-            those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H. Rackham.
-        </div>
-    </div>
-</footer>
-</div><!-- /container -->
-
-<div class="copyright">
+<div class="footer-top-area">
+    <div class="zigzag-bottom"></div>
     <div class="container">
-        <p class="pull-right">
-            <a href="#"><img src="assets/front/img/maestro.png" alt="payment"></a>
-            <a href="#"><img src="assets/front/img/mc.png" alt="payment"></a>
-            <a href="#"><img src="assets/front/img/pp.png" alt="payment"></a>
-            <a href="#"><img src="assets/front/img/visa.png" alt="payment"></a>
-            <a href="#"><img src="assets/front/img/disc.png" alt="payment"></a>
-        </p>
-        <span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-about-us">
+                    <h2>u<span>Stora</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu">
+                    <h2 class="footer-wid-title">User Navigation </h2>
+                    <ul>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">Order history</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Vendor contact</a></li>
+                        <li><a href="#">Front page</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu">
+                    <h2 class="footer-wid-title">Categories</h2>
+                    <ul>
+                        <li><a href="#">Mobile Phone</a></li>
+                        <li><a href="#">Home accesseries</a></li>
+                        <li><a href="#">LED TV</a></li>
+                        <li><a href="#">Computer</a></li>
+                        <li><a href="#">Gadets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-newsletter">
+                    <h2 class="footer-wid-title">Newsletter</h2>
+                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                    <div class="newsletter-form">
+                        <form action="#">
+                            <input type="email" placeholder="Type your email">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/front/js/jquery.js"></script>
-<script src="assets/front/js/bootstrap.min.js"></script>
-<script src="assets/front/js/jquery.easing-1.3.min.js"></script>
-<script src="assets/front/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-<script src="assets/front/js/shop.js"></script>
+</div> <!-- End footer top area -->
+
+<div class="footer-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="copyright">
+                    <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-card-icon">
+                    <i class="fa fa-cc-discover"></i>
+                    <i class="fa fa-cc-mastercard"></i>
+                    <i class="fa fa-cc-paypal"></i>
+                    <i class="fa fa-cc-visa"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End footer bottom area -->
+
+<!-- Latest jQuery form server -->
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+<!-- Bootstrap JS form CDN -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- jQuery sticky menu -->
+<script src="public/assets/front/js/owl.carousel.min.js"></script>
+<script src="public/assets/front/js/jquery.sticky.js"></script>
+
+<!-- jQuery easing -->
+<script src="public/assets/front/js/jquery.easing.1.3.min.js"></script>
+
+<!-- Main Script -->
+<script src="public/assets/front/js/main.js"></script>
+
+<!-- Slider -->
+<script type="text/javascript" src="public/assets/front/js/bxslider.min.js"></script>
+<script type="text/javascript" src="public/assets/front/js/script.slider.js"></script>
 </body>
 </html>

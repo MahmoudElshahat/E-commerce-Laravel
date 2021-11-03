@@ -44,9 +44,12 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         {{-- @isset($language) --}}
-                                        <form class="form" action={{route('lang.update',$language -> id)}} method="POST"
+                                                {{-- @foreach($language as $languageo) --}}
+                                        <form class="form" action="{{route('admin.languages.update',$languages -> id)}}" method="POST"
                                               enctype="multipart/form-data">
+
                                             @csrf
+                                            @method('GET')
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="ft-home"></i> بيانات  اللغة </h4>
 
@@ -56,9 +59,9 @@
                                                             <label for="projectinput1"> اسم اللغة </label>
                                                             <input type="text"  id="name"
                                                                    class="form-control"
-                                                                   value={{$language -> name}}
+                                                                   value="{{$languages -> name_en}}"
                                                                    placeholder="ادخل اسم اللغة  "
-                                                                   name="name">
+                                                                   name="name_en">
                                                             @error('name')
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
@@ -68,7 +71,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> أختصار اللغة </label>
-                                                            <input type="text" value="?????" id="name"
+                                                            <input type="text" value="{{$languages -> abbr}}" id="name"
                                                                    class="form-control"
                                                                    placeholder="ادخل أختصار اللغة  "
                                                                    name="abbr">
@@ -88,8 +91,8 @@
                                                             <label for="projectinput2"> الاتجاة </label>
                                                             <select name="direction" class="select2 form-control">
                                                                 <optgroup label="من فضلك أختر اتجاه اللغة ">
-                                                                    <option value="rtl" >من اليمين الي اليسار</option>
-                                                                    <option value="ltr" >من اليسار الي اليمين</option>
+                                                                    <option value="rtl" @if($languages ->direction == 'rtl' ) selected @endif>من اليمين الي اليسار</option>
+                                                                    <option value="ltr" @if($languages ->direction == 'ltr') selected @endif>من اليسار الي اليمين</option>
                                                                 </optgroup>
                                                             </select>
                                                             @error('direction')
@@ -98,7 +101,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                {{-- @endisset --}}
 
 
                                                 <div class="row">
@@ -108,7 +110,7 @@
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
 
-                                                                 
+                                                                  @if($languages -> active  == 1 ) checked @endif
                                                             />
                                                             <label for="switcheryColor4"
                                                                    class="card-title ml-1">الحالة </label>
@@ -131,6 +133,9 @@
                                                     <i class="la la-check-square-o"></i>  تحديث
                                                 </button>
                                             </div>
+
+                                                {{-- @endforeach --}}
+                                                {{-- @endisset --}}
                                         </form>
                                     </div>
                                 </div>

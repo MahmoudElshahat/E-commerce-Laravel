@@ -7,7 +7,7 @@
                     <div class="card-header border-0">
                         <div class="card-title text-center">
                             <div class="p-1">
-                                <img src="../../../../assets/admin/images/logo/logo.png" alt="LOGOoo"/>
+                                <img src="./public/assets/admin/images/logo/logo.png" alt="LOGO"/>
                             </div>
                         </div>
                         <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
@@ -21,7 +21,7 @@
                             <form class="form-horizontal form-simple" action="<?php echo e(route('admin.login')); ?>" method="post"
                                   novalidate>
                                 <?php echo csrf_field(); ?>
-                                
+
                                 <fieldset class="form-group position-relative has-icon-left mb-0">
                                     <input type="text" name="email" class="form-control form-control-lg input-lg"
                                            value="<?php echo e(old('email')); ?>" id="email" placeholder="أدخل البريد الالكتروني ">

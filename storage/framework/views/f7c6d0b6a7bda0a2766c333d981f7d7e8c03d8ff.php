@@ -1,16 +1,16 @@
 <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
        <div class="main-menu-content">
            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-   
+
                <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
                            class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span></a>
                </li>
-   
+
                <li class="nav-item  open ">
                    <a href=""><i class="la la-home"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">لغات الموقع </span>
                        <span
-                           class="badge badge badge-info badge-pill float-right mr-2">???</span>
+                           class="badge badge badge-info badge-pill float-right mr-2"><?php echo e(App\Models\language::count()); ?></span>
                    </a>
                    <ul class="menu-content">
                        <li class="active"><a class="menu-item" href="<?php echo e(route('admin.languages')); ?>"
@@ -21,30 +21,29 @@
                        </li>
                    </ul>
                </li>
-   
-   
-               <li class="nav-item"><a href=""><i class="la la-group"></i>
+
+
+               <li class="nav-item"><a href="<?php echo e(route('all.categori')); ?>"><i class="la la-group"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">الاقسام الرئيسيه </span>
                        <span
-                           class="badge badge badge-danger badge-pill float-right mr-2">???</span>
+                           class="badge badge badge-danger badge-pill float-right mr-2"><?php echo e(App\Models\main_categori::count()); ?></span>
                    </a>
                    <ul class="menu-content">
-                       <li class="active"><a class="menu-item" href="???"
-                                             data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                       <li class="active"><a class="menu-item" href="<?php echo e(route('all.categori')); ?>" data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                        </li>
-                       <li><a class="menu-item" href="???" data-i18n="nav.dash.crypto">أضافة
+                       <li><a class="menu-item" href="<?php echo e(route('create.categori')); ?>" data-i18n="nav.dash.crypto">أضافة
                                 قسم جديد </a>
                        </li>
                    </ul>
                </li>
-   
+
                <li class="nav-item"><a href=""><i class="la la-group"></i>
-                       <span class="menu-title" data-i18n="nav.dash.main">الاقسام الفرعية   </span>
+                       <span class="menu-title" data-i18n="nav.dash.main">المنتجات  </span>
                        <span
-                           class="badge badge badge-danger badge-pill float-right mr-2">400</span>
+                           class="badge badge badge-danger badge-pill float-right mr-2"><?php echo e(App\Models\item::count()); ?></span>
                    </a>
                    <ul class="menu-content">
-                       <li class="active"><a class="menu-item" href="???"
+                       <li class="active"><a class="menu-item" href="<?php echo e(route('all.items')); ?>"
                                              data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                        </li>
                        <li><a class="menu-item" href="???" data-i18n="nav.dash.crypto">أضافة
@@ -52,7 +51,7 @@
                        </li>
                    </ul>
                </li>
-   
+
                <li class="nav-item"><a href=""><i class="la la-male"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
                        <span
@@ -67,8 +66,8 @@
                        </li>
                    </ul>
                </li>
-   
-   
+
+
                <li class="nav-item"><a href=""><i class="la la-male"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>
                        <span
@@ -83,8 +82,8 @@
                        </li>
                    </ul>
                </li>
-   
-   
+
+
                <li class="nav-item">
                    <a href=""><i class="la la-male"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>
@@ -97,8 +96,8 @@
                        </li>
                    </ul>
                </li>
-   
-   
+
+
                <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
                                                                                        data-i18n="nav.templates.main">Templates</span></a>
                    <ul class="menu-content">
@@ -1557,4 +1556,4 @@
            </ul>
        </div>
    </div>
-   <?php /**PATH /opt/lampp/htdocs/jewelry33/resources/views/admin/includes/sidebar.blade.php ENDPATH**/ ?>
+<?php /**PATH /opt/lampp/htdocs/jewelry33/resources/views/admin/includes/sidebar.blade.php ENDPATH**/ ?>

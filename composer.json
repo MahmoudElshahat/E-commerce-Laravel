@@ -15,8 +15,11 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
+        "nowakowskir/php-jwt": "^2.0",
+        "pusher/pusher-php-server": "^7.0",
         "tightenco/ziggy": "^1.0",
-        "tymon/jwt-auth": "^1.0"
+        "tymon/jwt-auth": "^1.0",
+        "intervention/image": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -62,4 +65,7 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
+
+
+
 }

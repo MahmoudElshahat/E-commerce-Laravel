@@ -1,4 +1,4 @@
-<!--
+{{-- <!--
 Navigation Bar Section
 -->
 <div class="navbar">
@@ -45,4 +45,4 @@ Navigation Bar Section
             </div>
         </div>
     </div>
-</div>
+</div> --}}

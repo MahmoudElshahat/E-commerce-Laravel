@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="content-body">
-                
+
                 <!-- DOM - jQuery events table -->
                 <section id="dom">
                     <div class="row">
@@ -58,18 +58,18 @@
                                             <?php if(isset($languages)): ?>
                                                 <?php $__currentLoopData = $languages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <tr>
-                                                        <td><?php echo e($language -> name); ?></td>
+                                                        <td><?php echo e($language -> name_en); ?></td>
                                                         <td><?php echo e($language -> abbr); ?></td>
                                                         <td><?php echo e($language -> direction); ?></td>
                                                         <td><?php echo e($language -> active); ?></td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="<?php echo e(route('lang.edite',$language -> id)); ?>"
+                                                                <a href="<?php echo e(route('admin.languages.edite',$language -> id)); ?>"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
 
 
-                                                                <a href="????"
+                                                                <a href="<?php echo e(route('admin.languages.delete',$language -> id)); ?>"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
 
 

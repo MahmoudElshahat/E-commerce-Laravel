@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 // use Eloquent;
 use Illuminate\Support\Facades\Eloquent;
 use Tymon\JWTAuth\Contracts\JWTSubject;
-class language extends Authenticatable implements jwtSubject
+class language extends Authenticatable
 {
     use HasFactory ;
     use Notifiable;
@@ -20,12 +20,13 @@ class language extends Authenticatable implements jwtSubject
      */
     protected $table='languages';
     protected $fillable = [
-        'id','name_ar','name_en','abbr','native','active','direction','local','Created_at','updated_at',
+        'id','name_en','abbr','native','active','direction','local','Created_at','updated_at',
     ];
     // ########################################
     public function scopeActive($query){
         return $query->where('active',1);
     }
+    // ######################################
     public function scopeselection($query){
 
         return $query->select('name_ar','name_en','abbr','direction','active');

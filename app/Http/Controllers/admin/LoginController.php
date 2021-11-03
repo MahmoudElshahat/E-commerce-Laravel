@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\loginRequest;
+use App\Http\Requests\admin\loginRequest;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Request;
@@ -14,7 +14,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 Class LoginController extends Controller
 {
-//  ############  getlogin func to use in routes ###########   
+//  ############  getlogin func to use in routes ###########
     public function getLogin(){
 
         return view('admin.Auth.login');
@@ -41,10 +41,10 @@ Class LoginController extends Controller
         }else{
             return redirect()->route('admin.login')->with(['error' => 'هناك خطا بالبيانات']);
         }
-        
+
     }
     //################# start logout function ######################
     public function backhome(){
         return view('front.home');
     }
-}  
+}

@@ -52,6 +52,18 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
+        // #############
+        'categori'=>[
+
+            'driver'=>'local',
+            'root'=>public_path() . '/assets/front/images/',
+            'url'=>env('APP_URL') . '/public',
+            'visibility'=>'public'
+
+
+
+        ],
+
 
     ],
 
@@ -68,6 +80,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('all_img') => storage_path('app/public/images'),
+        // public_path('my_custom_symlink_1') => storage_path('app/folder1'),
     ],
 
 ];

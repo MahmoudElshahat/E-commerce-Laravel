@@ -20,8 +20,8 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
@@ -34,6 +34,7 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '98caa11a197f6516a8e48aa4abb5ccc6' => __DIR__ . '/..' . '/inertiajs/inertia-laravel/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
@@ -95,6 +96,7 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         ),
         'P' => 
         array (
+            'Pusher\\' => 7,
             'Psy\\' => 4,
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
@@ -115,6 +117,7 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         'N' => 
         array (
             'NunoMaduro\\Collision\\' => 21,
+            'Nowakowskir\\JWT\\' => 16,
             'Namshi\\JOSE\\' => 12,
         ),
         'M' => 
@@ -343,6 +346,10 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
+        'Pusher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pusher/pusher-php-server/src',
+        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
@@ -399,6 +406,10 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
+        ),
+        'Nowakowskir\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nowakowskir/php-jwt/src',
         ),
         'Namshi\\JOSE\\' => 
         array (
@@ -618,8 +629,10 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\admin\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/LoginController.php',
+        'App\\Http\\Controllers\\admin\\categoriController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/categoriController.php',
         'App\\Http\\Controllers\\admin\\dashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/dashboardController.php',
         'App\\Http\\Controllers\\admin\\languagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/languagesController.php',
+        'App\\Http\\Controllers\\api\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/api/AuthController.php',
         'App\\Http\\Controllers\\api\\mainCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/api/mainCategoryController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -633,9 +646,12 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Middleware\\admin' => __DIR__ . '/../..' . '/app/Http/Middleware/admin.php',
         'App\\Http\\Middleware\\change_language' => __DIR__ . '/../..' . '/app/Http/Middleware/change_language.php',
+        'App\\Http\\Middleware\\check_admin_token' => __DIR__ . '/../..' . '/app/Http/Middleware/check_admin_token.php',
         'App\\Http\\Middleware\\checkpasswor' => __DIR__ . '/../..' . '/app/Http/Middleware/checkpasswor.php',
-        'App\\Http\\Requests\\languagesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/languagesRequest.php',
-        'App\\Http\\Requests\\loginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/loginRequest.php',
+        'App\\Http\\Requests\\Api\\apiLoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Api/apiLoginRequest.php',
+        'App\\Http\\Requests\\admin\\categoriRequest' => __DIR__ . '/../..' . '/app/Http/Requests/admin/categoriRequest.php',
+        'App\\Http\\Requests\\admin\\languagesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/admin/languagesRequest.php',
+        'App\\Http\\Requests\\admin\\loginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/admin/loginRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
         'App\\Models\\language' => __DIR__ . '/../..' . '/app/Models/language.php',
@@ -3634,6 +3650,23 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+        'Nowakowskir\\JWT\\Base64Url' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Base64Url.php',
+        'Nowakowskir\\JWT\\Exceptions\\AlgorithmMismatchException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/AlgorithmMismatchException.php',
+        'Nowakowskir\\JWT\\Exceptions\\EmptyTokenException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/EmptyTokenException.php',
+        'Nowakowskir\\JWT\\Exceptions\\InsecureTokenException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/InsecureTokenException.php',
+        'Nowakowskir\\JWT\\Exceptions\\IntegrityViolationException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/IntegrityViolationException.php',
+        'Nowakowskir\\JWT\\Exceptions\\InvalidClaimTypeException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/InvalidClaimTypeException.php',
+        'Nowakowskir\\JWT\\Exceptions\\InvalidStructureException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/InvalidStructureException.php',
+        'Nowakowskir\\JWT\\Exceptions\\SigningFailedException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/SigningFailedException.php',
+        'Nowakowskir\\JWT\\Exceptions\\TokenExpiredException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/TokenExpiredException.php',
+        'Nowakowskir\\JWT\\Exceptions\\TokenInactiveException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/TokenInactiveException.php',
+        'Nowakowskir\\JWT\\Exceptions\\UndefinedAlgorithmException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/UndefinedAlgorithmException.php',
+        'Nowakowskir\\JWT\\Exceptions\\UnsupportedAlgorithmException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/UnsupportedAlgorithmException.php',
+        'Nowakowskir\\JWT\\Exceptions\\UnsupportedTokenTypeException' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Exceptions/UnsupportedTokenTypeException.php',
+        'Nowakowskir\\JWT\\JWT' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/JWT.php',
+        'Nowakowskir\\JWT\\TokenDecoded' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/TokenDecoded.php',
+        'Nowakowskir\\JWT\\TokenEncoded' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/TokenEncoded.php',
+        'Nowakowskir\\JWT\\Validation' => __DIR__ . '/..' . '/nowakowskir/php-jwt/src/Validation.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/CollisionServiceProvider.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\Commands\\TestCommand' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/Commands/TestCommand.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php',
@@ -4637,6 +4670,13 @@ class ComposerStaticInita8dc9b74391a39daf61b11b605350f43
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'Pusher\\ApiErrorException' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/ApiErrorException.php',
+        'Pusher\\Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/Pusher.php',
+        'Pusher\\PusherCrypto' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherCrypto.php',
+        'Pusher\\PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherException.php',
+        'Pusher\\PusherInstance' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherInstance.php',
+        'Pusher\\PusherInterface' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherInterface.php',
+        'Pusher\\Webhook' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/Webhook.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',

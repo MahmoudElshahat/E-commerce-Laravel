@@ -41,10 +41,13 @@
                                 <?php echo $__env->make('admin.includes.alerts.errors', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <?php if(isset($language)): ?>
-                                        <form class="form" action=<?php echo e(route('lang.update',$language -> id)); ?> method="POST"
+                                        
+                                                
+                                        <form class="form" action="<?php echo e(route('admin.languages.update',$languages -> id)); ?>" method="POST"
                                               enctype="multipart/form-data">
+
                                             <?php echo csrf_field(); ?>
+                                            <?php echo method_field('GET'); ?>
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="ft-home"></i> بيانات  اللغة </h4>
 
@@ -54,10 +57,9 @@
                                                             <label for="projectinput1"> اسم اللغة </label>
                                                             <input type="text"  id="name"
                                                                    class="form-control"
-                                                                   value=<?php echo e($language -> name); ?>
-
+                                                                   value="<?php echo e($languages -> name_en); ?>"
                                                                    placeholder="ادخل اسم اللغة  "
-                                                                   name="name">
+                                                                   name="name_en">
                                                             <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -74,7 +76,7 @@ unset($__errorArgs, $__bag); ?>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> أختصار اللغة </label>
-                                                            <input type="text" value="?????" id="name"
+                                                            <input type="text" value="<?php echo e($languages -> abbr); ?>" id="name"
                                                                    class="form-control"
                                                                    placeholder="ادخل أختصار اللغة  "
                                                                    name="abbr">
@@ -101,8 +103,8 @@ unset($__errorArgs, $__bag); ?>
                                                             <label for="projectinput2"> الاتجاة </label>
                                                             <select name="direction" class="select2 form-control">
                                                                 <optgroup label="من فضلك أختر اتجاه اللغة ">
-                                                                    <option value="rtl" >من اليمين الي اليسار</option>
-                                                                    <option value="ltr" >من اليسار الي اليمين</option>
+                                                                    <option value="rtl" <?php if($languages ->direction == 'rtl' ): ?> selected <?php endif; ?>>من اليمين الي اليسار</option>
+                                                                    <option value="ltr" <?php if($languages ->direction == 'ltr'): ?> selected <?php endif; ?>>من اليسار الي اليمين</option>
                                                                 </optgroup>
                                                             </select>
                                                             <?php $__errorArgs = ['direction'];
@@ -118,7 +120,6 @@ unset($__errorArgs, $__bag); ?>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <?php endif; ?>
 
 
                                                 <div class="row">
@@ -128,7 +129,7 @@ unset($__errorArgs, $__bag); ?>
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
 
-                                                                 
+                                                                  <?php if($languages -> active  == 1 ): ?> checked <?php endif; ?>
                                                             />
                                                             <label for="switcheryColor4"
                                                                    class="card-title ml-1">الحالة </label>
@@ -158,6 +159,9 @@ unset($__errorArgs, $__bag); ?>
                                                     <i class="la la-check-square-o"></i>  تحديث
                                                 </button>
                                             </div>
+
+                                                
+                                                
                                         </form>
                                     </div>
                                 </div>
