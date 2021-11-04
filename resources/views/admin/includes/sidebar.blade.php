@@ -46,13 +46,13 @@
                        <li class="active"><a class="menu-item" href="{{route('all.items')}}"
                                              data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                        </li>
-                       <li><a class="menu-item" href="???" data-i18n="nav.dash.crypto">أضافة
-                               قسم فرعي جديد </a>
+                       <li><a class="menu-item" href="{{route('create.item')}}" data-i18n="nav.dash.crypto">أضافة
+                            منتج</a>
                        </li>
                    </ul>
                </li>
 
-               <li class="nav-item"><a href=""><i class="la la-male"></i>
+               {{--<li class="nav-item"><a href=""><i class="la la-male"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
                        <span
                            class="badge badge badge-success badge-pill float-right mr-2">???</span>
@@ -68,7 +68,7 @@
                </li>
 
 
-               <li class="nav-item"><a href=""><i class="la la-male"></i>
+               {{-- <li class="nav-item"><a href=""><i class="la la-male"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>
                        <span
                            class="badge badge badge-warning  badge-pill float-right mr-2"></span>
@@ -81,10 +81,10 @@
                                طالب </a>
                        </li>
                    </ul>
-               </li>
+               </li> --}}
 
 
-               <li class="nav-item">
+               {{-- <li class="nav-item">
                    <a href=""><i class="la la-male"></i>
                        <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>
                        <span
@@ -95,10 +95,10 @@
                                              data-i18n="nav.dash.ecommerce"> تذاكر الطلاب </a>
                        </li>
                    </ul>
-               </li>
+               </li> --}}
 
 
-               <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
+               {{-- <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
                                                                                        data-i18n="nav.templates.main">Templates</span></a>
                    <ul class="menu-content">
                        <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
@@ -130,8 +130,8 @@
                            </ul>
                        </li>
                    </ul>
-               </li>
-               <li class=" navigation-header">
+               </li> --}}
+              {{-- <li class=" navigation-header">
                    <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus"
                                                                            data-toggle="tooltip"
                                                                            data-placement="right"

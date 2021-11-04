@@ -25,7 +25,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title" id="basic-layout-form"> إضافة قسم رئيسي </h4>
+                                <h4 class="card-title" id="basic-layout-form"> إضافة منتج  </h4>
                                 <a class="heading-elements-toggle"><i
                                         class="la la-ellipsis-v font-medium-3"></i></a>
                                 <div class="heading-elements">
@@ -74,6 +74,37 @@
                                                                 {{-- @enderror --}}
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> سعر المنتج  ????? </label>
+                                                                    <input type="text" value="" id="name"
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           name="price">
+                                                                    {{-- @error("category.$index.name") --}}
+                                                                    {{-- <span class="text-danger"> هذا الحقل مطلوب</span> --}}
+                                                                    {{-- @enderror --}}
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="cars">Choose a car:</label>
+                                                                        {{-- <input type='select' name='cid'> --}}
+                                                                            <select name="category" id="cars">
+                                                                            {{-- @isset($categories) --}}
+                                                                            @foreach($categories as $category)
+                                                                              <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                            @endforeach
+
+                                                                            </select>
+
+                                                                        {{-- @error("category.$index.name") --}}
+                                                                        {{-- <span class="text-danger"> هذا الحقل مطلوب</span> --}}
+                                                                        {{-- @enderror --}}
+                                                                    </div>
+                                                                </div>
 
 
                                                         {{-- <div class="col-md-6 hidden">
@@ -93,7 +124,7 @@
 
 
                                                     </div>
-                                                    <div class="row">
+                                                    <div class="form-action">
                                                         <div class="col-md-6">
                                                             <div class="form-group mt-1">
                                                                 <input type="checkbox" value='1'

@@ -57,6 +57,7 @@ Body Section
 				<ul class="" id="bxslider-home4">
 					<li>
 						<img src="./public/assets/front/images/h4-slide.png" alt="Slide">
+                        {{-- <img src="./public/images/1636018394-branddd.jpg" alt="Slide"> --}}
 						<div class="caption-group">
 							<h2 class="caption title">
 								iPhone <span class="primary">6 <strong>Plus</strong></span>

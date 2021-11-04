@@ -50,6 +50,7 @@
                                              <th>الحالة</th>
                                              <th>صوره المنتج</th>
                                              <th>اسم القسم</th>
+                                             <th>السعر </th>
                                             <th>الإجراءات</th>
                                         </tr>
                                         </thead>
@@ -58,21 +59,23 @@
                                         
                                             <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <tr>
-                                                    <td><?php echo e($item -> name); ?></td>
-                                                    <td><?php echo e($item -> translation_language); ?></td>
+                                                    <td><?php echo e($item ->name); ?></td>
+                                                    <td><?php echo e($item ->translation_language); ?></td>
                                                     <td><?php echo e($item -> active); ?></td>
                                                     
                                                     
                                                     <td> <img  src="<?php echo e(storage_path('images'.$item-> image_path)); ?>" alt='<?php echo e('image of- '.$item -> name); ?>'></td>
                                                     <td>موبايلات</td>
+                                                    <td><?php echo e($item-> price); ?></td>
+
                                                     <td>
                                                         <div class="btn-group" role="group"
                                                              aria-label="Basic example">
-                                                            <a href="<?php echo e(route('edite.ctegori',$item-> id)); ?>"
+                                                            <a href="<?php echo e(route('edite.item',$item-> id)); ?>"
                                                                class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
 
 
-                                                            <a href="<?php echo e(route('delete.categori',$item-> id)); ?>"
+                                                            <a href="????????"
                                                                class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
 
 

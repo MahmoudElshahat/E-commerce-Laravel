@@ -32,6 +32,7 @@ Route::group(['namespace'=>'admin','middleware' => 'guest:admin'], function () {
 define('pagination_count',10);
 Route::group(['namespace' => 'admin','middleware' => 'auth:admin'], function () {
     Route::get('/', 'dashboardController@index')->name('admin.dashboard');
+    Route::get('logout','LoginController@logout')->name('logout');
 
 // >>>>>>>>>>>>>>>>>>>>>>>> start language route <<<<<<<<<<<<<<
 Route::group(['prefix'=>'languages'],function(){
@@ -68,6 +69,16 @@ Route::group(['prefix'=>'categori'],function(){
 Route::group(['prefix'=>'items'],function(){
 
 Route::get('/','itemsController@index')->name('all.items');
+
+Route::get('create','itemsController@create')->name('create.item');
+
+Route::post('insert','itemsController@insert')->name('insert.item');
+
+Route::get('edite/{id}','itemsController@edite')->name('edite.item');
+
+Route::post('update/{id}','itemsController@update')->name('update.item');
+
+
 
 
 });//end items route

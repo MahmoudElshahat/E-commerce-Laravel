@@ -107,7 +107,7 @@
                                     class="ft-user"></i> تعديل الملف الشحصي </a>
                             <div class="dropdown-divider"></div>
 
-                            <a href="{{ url('/logout') }}" class="dropdown-item"> <i class="ft-power"></i> تسجيل الخروج  </a>
+                            <a href="{{ route('logout')}}" class="dropdown-item"> <i class="ft-power"></i> تسجيل الخروج  </a>
 
 
 

@@ -107,7 +107,7 @@
                                     class="ft-user"></i> تعديل الملف الشحصي </a>
                             <div class="dropdown-divider"></div>
 
-                            <a href="<?php echo e(url('/logout')); ?>" class="dropdown-item"> <i class="ft-power"></i> تسجيل الخروج  </a>
+                            <a href="<?php echo e(route('logout')); ?>" class="dropdown-item"> <i class="ft-power"></i> تسجيل الخروج  </a>
 
 
 

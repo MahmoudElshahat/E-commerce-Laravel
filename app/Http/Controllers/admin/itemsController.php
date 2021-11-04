@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\admin\itemsRequest;
 use App\Models\item;
-
+use App\Models\admin;
+use App\Models\main_categori;
+use Illuminate\Support\Facades\Session;
+// 123456
 class itemsController extends Controller
 {
     public function index(){
@@ -16,7 +19,8 @@ class itemsController extends Controller
     // ######### start creat function#######################
 
     public function create(){
-        return view('admin.items.create');
+        $categories=main_categori::select()->paginate(pagination_count);
+        return view('admin.items.create',compact('categories'));
     }
     // ######### start insert function  #######################
 
@@ -32,31 +36,41 @@ class itemsController extends Controller
         // $test=$request->file('photo')->getError();
         // $test=$request->file('photo')->isvlaid();
         // =================================
+        $admin_id=session_id();
+        // $value = session()->('id',);
+
+
+        // dd($value);
         $NewImageName= time().'-'.$request-> name.'.'.$request->photo->extension();
 
-        $request->photo->move(storage_path('images'),$NewImageName);
+        $request->photo->move(public_path('images'),$NewImageName);
 
         $active= !$request->has('active')?  0 : 1;
+    //    $adminid= admin::select()->find($value);
 
                 item::create([
 
-                    'name'      =>$request->input('name'),
-                    'image_path'=> $NewImageName,
-                    'active'    =>$active
+                    'name'       =>$request->name,
+                    'image_path' =>$NewImageName,
+                    'active'     =>$active,
+                    'price'      =>$request->price,
+                    'category_id'=>$request->category,
+                    'admin_id'=>$admin_id
 
             ]);
-        return redirect()->route('all.item');
+        return redirect()->route('all.items')->with(['success'=>'success item added']);
 
     }
     // ######### start edite function #######################
-/*
     public function edite($id){
-        $categore=item::select()->find($id);
-        return view('admin.itemes.edite',compact('categore'));
+        $items=item::select()->find($id);
+        return view('admin.items.edite',compact('items'));
     }
 
+
     // ######### start update function #######################
-    public function update($id , itemRequest $request){
+    public function update($id ,itemsRequest $request){
+
 
         $q=item::find($id);
         $active= !$request->has('active') ? 0 : 1;
@@ -66,7 +80,7 @@ class itemsController extends Controller
 
         $q->update([
             'name'=> $request->input('name'),
-
+            'price'=>$request->input('price'),
             'active'=>$active
         ]);
 
@@ -78,16 +92,17 @@ class itemsController extends Controller
 
             $request->photo->move(public_path('images'),$NewImageName);
 
-            $filePath = $NewImageName;
+            // $filePath = $NewImageName;
             item::where('id', $id)
                 ->update([
-                    'image_path' => $filePath,
+                    'image_path' => $NewImageName,
                 ]);
         }
 
-    return redirect()->route('all.item')->with(['success'=>'success update']);
+    return redirect()->route('all.items')->with(['success'=>'success update']);
     }
 // ################ start delete fuction#############################
+/*
 public function delete($id){
 
    $query= item::select()->find($id);

@@ -51,6 +51,7 @@
                                              <th>الحالة</th>
                                              <th>صوره المنتج</th>
                                              <th>اسم القسم</th>
+                                             <th>السعر </th>
                                             <th>الإجراءات</th>
                                         </tr>
                                         </thead>
@@ -59,21 +60,23 @@
                                         {{-- @isset($categories) --}}
                                             @foreach($items as $item)
                                                 <tr>
-                                                    <td>{{$item -> name}}</td>
-                                                    <td>{{$item -> translation_language}}</td>
+                                                    <td>{{$item ->name}}</td>
+                                                    <td>{{$item ->translation_language}}</td>
                                                     <td>{{$item -> active}}</td>
                                                     {{-- <td>{{$item -> image_path}}</td> --}}
                                                     {{-- style="width: 150px; height: 100px;" --}}
                                                     <td> <img  src="{{storage_path('images'.$item-> image_path)}}" alt='{{'image of- '.$item -> name}}'></td>
                                                     <td>موبايلات</td>
+                                                    <td>{{$item-> price}}</td>
+
                                                     <td>
                                                         <div class="btn-group" role="group"
                                                              aria-label="Basic example">
-                                                            <a href="{{route('edite.ctegori',$item-> id)}}"
+                                                            <a href="{{route('edite.item',$item-> id)}}"
                                                                class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
 
 
-                                                            <a href="{{route('delete.categori',$item-> id)}}"
+                                                            <a href="????????"
                                                                class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
 
 

@@ -7,6 +7,8 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Request;
 use App\Models;
+// use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Session;
 ################
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Http\Requests;
@@ -46,5 +48,14 @@ Class LoginController extends Controller
     //################# start logout function ######################
     public function backhome(){
         return view('front.home');
+    }
+    // ##################
+    public function logout(){
+        // must => use Illuminate\Support\Facades\Session;
+        
+        Session::flush();
+        Auth::logout();
+         return view('admin.Auth.login');
+
     }
 }

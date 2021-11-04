@@ -7,9 +7,9 @@
                 <div class="row breadcrumbs-top">
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">الرئيسية </a>
+                            <li class="breadcrumb-item"><a href="?????">الرئيسية </a>
                             </li>
-                            <li class="breadcrumb-item"><a href=""> الاقسام الرئيسية </a>
+                            <li class="breadcrumb-item"><a href="??????"> الاقسام الرئيسية </a>
                             </li>
                             <li class="breadcrumb-item active">إضافة قسم رئيسي
                             </li>
@@ -39,10 +39,19 @@
                             </div>
                             @include('admin.includes.alerts.success')
                             @include('admin.includes.alerts.errors')
+                            <img src="./public/images/1636018394-branddd.jpg" alt="Slide">
                             <div class="card-content collapse show">
                                 <div class="card-body">
+                                    {{-- <img src="./public/images/1636018394-branddd.jpg" alt="Slide"> --}}
 
-                                    <form class="form" action="{{route('update.categori',$categore-> id)}}"
+                                    <div class="caption-group">
+                                        {{-- <h2 class="caption title">
+                                            iPhone <span class="primary">6 <strong>Plus</strong></span>
+                                        </h2> --}}
+                                        {{-- <h4 class="caption subtitle">Dual SIM</h4> --}}
+                                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                                    </div>
+                                    <form class="form" action="{{route('update.item',$items-> id)}}"
                                           method="POST"
                                           enctype="multipart/form-data">
                                         @csrf
@@ -50,9 +59,9 @@
                                         {{-- {{dd($categore)}} --}}
 
                                         <div class="form-group">
-                                            <label> صوره القسم </label>
+                                            <label> صوره المنتج </label>
+
                                             <label id="projectinput7" class="file center-block">
-                                                <img src='{{asset('images/'.$categore-> image_path)}}'  alt="{{$categore-> image_path}}"/>
                                                 <span class="file-custom"></span>
                                                 <input type='file'  name='photo'>
                                             </label>
@@ -63,14 +72,14 @@
 
                                         <div class="form-body">
 
-                                            <h4 class="form-section"><i class="ft-home"></i> بيانات القسم </h4>
+                                            <h4 class="form-section"><i class="ft-home"></i> بيانات المنتج </h4>
 
 
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <label for="projectinput1"> اسم القسم ????? </label>
-                                                                <input type="text" value="{{$categore-> name}}" id="name"
+                                                                <label for="projectinput1"> اسم المنتج</label>
+                                                                <input type="text" value="{{$items-> name}}" id="name"
                                                                        class="form-control"
                                                                        placeholder="  "
                                                                        name="name">
@@ -79,24 +88,65 @@
                                                                 {{-- @enderror --}}
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> سعر المنتج </label>
+                                                                    <input type="text" value="{{$items-> price}}" id="name"
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           name="price">
+                                                                    {{-- @error("category.$index.name") --}}
+                                                                    {{-- <span class="text-danger"> هذا الحقل مطلوب</span> --}}
+                                                                    {{-- @enderror --}}
+                                                                </div>
+                                                        </div>
+                                                        {{-- ============================ --}}
+
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> تقيم المنتج </label>
+                                                                    <input type="text" value="{{$items-> rate}}" id="name"
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           name="rate">
+                                                                           {{-- <div class="mt-5 d-flex justify-content-between align-items-center"> --}}
+                                                                            {{-- <h5 class="review-stat">Cleanliness</h5> --}}
+                                                                            <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                                                        {{-- </div> --}}
+                                                                    {{-- @error("category.$index.name") --}}
+                                                                    {{-- <span class="text-danger"> هذا الحقل مطلوب</span> --}}
+                                                                    {{-- @enderror --}}
+                                                                </div>
+                                                        </div>
+                                                    </div>
+
+                                                        {{-- =================== --}}
+                                                    </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group mt-1">
+                                                                    <label for="cars">اسم القسم :</label>
+                                                                    {{-- <input type='select' name='cid'> --}}
+                                                                        <select name="category" id="cars">
+                                                                        {{-- @isset($categories) --}}
+                                                                        {{-- @foreach($categories as $category) --}}
+                                                                          <option value="{{$items->id}}">{{$items->name}}</option>
+                                                                        {{-- @endforeach --}}
+
+                                                                        </select>
+
+                                                                    {{-- @error("category.$index.name") --}}
+                                                                    {{-- <span class="text-danger"> هذا الحقل مطلوب</span> --}}
+                                                                    {{-- @enderror --}}
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            {{-- =========================================== --}}
 
 
-                                                        {{-- <div class="col-md-6 hidden">
-                                                            <div class="form-group">
-                                                                <label for="projectinput1"> أختصار اللغة ????? </label>
-                                                                <input type="text" id="abbr"
-                                                                       class="form-control"
-                                                                       placeholder="اختصار اللغة"
-                                                                       value="???????"
-                                                                       name="abbr">{{--???????--}}
-
-                                                                {{-- @error("category.$index.abbr") --}}
-                                                                {{-- <span class="text-danger"> هذا الحقل مطلوب</span> --}}
-                                                                {{-- @enderror --}}
-                                                            {{-- </div> --}}
-                                                        {{-- </div>  --}}
-
-
+                                                    </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-6">
@@ -105,9 +155,9 @@
                                                                        name="active"{{--??????--}}
                                                                        id="switcheryColor4"
                                                                        class="switchery" data-color="success"
-                                                                       @if($categore->active > 0) checked @endif/>
+                                                                       @if($items->active > 0) checked @endif/>
                                                                 <label for="switcheryColor4"
-                                                                       class="card-title ml-1">الحالة  ??????? </label>
+                                                                       class="card-title ml-1">الحالة</label>
 
                                                                 {{-- @error("category.$index.active") --}}
                                                                 <span class="text-danger"> </span>
@@ -136,6 +186,7 @@
                         </div>
                     </div>
                 </div>
+
             </section>
             <!-- // Basic form layout section end -->
         </div>
