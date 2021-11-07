@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\auth;
+use app\http\Controllers\admin;
+
 use app\http\Controllers\admin\LoginController;
 /*
 |--------------------------------------------------------------------------
@@ -28,11 +30,24 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
-Route::get('/',function(){
-    return view('front.home');
-});
-// Auth::routes();
+// Route::get('/','loginController@backhome')->name('home');
+// });
+// #################################################################
+Route::group(['middleware'=>'guest'],function(){
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-########## logout route #####################
-// Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+    Route::get('/', 'admin\loginController@backhome')->name('back.home');
+    // Route::get('ho', 'admin\loginController@backhome')->name('back.home');
+
+
+});
+
+
+
+
+
+
+
+
+// ########################## laravel static ###############33
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

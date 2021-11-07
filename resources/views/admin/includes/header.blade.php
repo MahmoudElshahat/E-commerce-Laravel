@@ -117,6 +117,9 @@
                     <li class="dropdown dropdown-notification nav-item">
                         <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
                             <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
+                            <li><a style="color:white;"href="{{route('back.home')}}">
+                                <span class="user-name text-bold-700"> Home </span></a>
+                            </li>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                             <li class="dropdown-menu-header">
@@ -126,6 +129,7 @@
                                 <span
                                     class="notification-tag badge badge-default badge-danger float-right m-0">5 New</span>
                             </li>
+
                             <li class="scrollable-container media-list w-100">
                                 <a href="javascript:void(0)">
                                     <div class="media">

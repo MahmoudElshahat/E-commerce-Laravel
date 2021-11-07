@@ -9,12 +9,17 @@ use App\Models\item;
 use App\Models\admin;
 use App\Models\main_categori;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Support\Facades\View;
+
 // 123456
 class itemsController extends Controller
 {
     public function index(){
         $items=item::select()->paginate(pagination_count);
         return view('admin.items.index',compact('items'));
+        // view()->share('items','admin.items.index','item','front.home',compact('items'));
+        // view('admin.items.index','front.home',compact('items'));
     }
     // ######### start creat function#######################
 
@@ -102,13 +107,13 @@ class itemsController extends Controller
     return redirect()->route('all.items')->with(['success'=>'success update']);
     }
 // ################ start delete fuction#############################
-/*
+
 public function delete($id){
 
    $query= item::select()->find($id);
     $query->delete($id);
-    return redirect()->route('all.item')->with(['success'=>'category Deleted succefuly']);
+    return redirect()->route('all.items')->with(['success'=>'item Deleted succefuly']);
 
-}*/
+}
 
 }

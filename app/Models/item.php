@@ -17,12 +17,27 @@ class item extends Authenticatable
 
     public $timestamps = false;
     protected $fillable=[
-        'id','admin_id','active','rate','category_id','name','price','image_path','Created_at','update_at'
+        'id',
+        'admin_id',
+        'active',
+        'rate',
+        'category_id',
+        'name',
+        'price',
+        'image_path',
+        'Created_at',
+        'update_at'
     ];
 
     // ########### query select data #########
     public function scopeselection($query){
         return  $query-> select('id','active','admin_id','rate','category_id','name','price','image_path');
+    }
+
+    // ######################\
+    public function __construct($query){
+         $query-> select('id','active','admin_id','rate','category_id','name','price','image_path');
+
     }
 
 }// end file

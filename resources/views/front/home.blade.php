@@ -55,8 +55,9 @@ Body Section
         	<!-- Slider -->
 			<div class="block-slider block-slider4">
 				<ul class="" id="bxslider-home4">
+                    @isset($home_item)
 					<li>
-						<img src="./public/assets/front/images/h4-slide.png" alt="Slide">
+						<img src="{{$home_item->name}}" alt="Slide">
                         {{-- <img src="./public/images/1636018394-branddd.jpg" alt="Slide"> --}}
 						<div class="caption-group">
 							<h2 class="caption title">
@@ -66,6 +67,7 @@ Body Section
 							<a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
 						</div>
 					</li>
+                    @endisset
 					<li><img src="./public/assets/front/images/h4-slide2.png" alt="Slide">
 						<div class="caption-group">
 							<h2 class="caption title">

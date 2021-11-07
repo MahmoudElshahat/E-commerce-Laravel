@@ -24,7 +24,7 @@ class itemsRequest extends FormRequest
     public function rules()
     {
         return [
-            'photo'=>'required',
+            'photo'=>'required_without:id',
             'name'=>'required',
             'price'=>'required',
             'category'=>'required',

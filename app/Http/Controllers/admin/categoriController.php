@@ -92,10 +92,10 @@ class categoriController extends Controller
 
             $request->photo->move(public_path('images'),$NewImageName);
 
-            $filePath = $NewImageName;
+            // $filePath = $NewImageName;
             main_categori::where('id', $id)
                 ->update([
-                    'image_path' => $filePath,
+                    'image_path' => $NewImageName,
                 ]);
         }
 

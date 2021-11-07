@@ -52,6 +52,8 @@
                                         <div class="form-group">
                                             <label> صوره القسم </label>
                                             <label id="projectinput7" class="file center-block">
+                                                <input type='hidden'  name='id' value="{{$categore-> id}}">
+
                                                 <img src='{{asset('images/'.$categore-> image_path)}}'  alt="{{$categore-> image_path}}"/>
                                                 <span class="file-custom"></span>
                                                 <input type='file'  name='photo'>

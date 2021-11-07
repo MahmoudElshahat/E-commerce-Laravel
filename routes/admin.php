@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\admin\LoginController;
+use App\Http\Controllers\admin\loginController;
 use Illuminate\Support\Facades\Route;
 use app\Http\Middleware;
 use Illuminate\Support\Facades\Auth;
@@ -21,18 +21,19 @@ use App\Http\Controllers\admin\languagesController;
 |
 */
 ###################### start admin login routes #################################
-Route::group(['namespace'=>'admin','middleware' => 'guest:admin'], function () {
-    Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
-    Route::post('login', 'LoginController@login')->name('admin.login');
 
-    Route::get('backHome','LoginController@backhome')->name('backhome');
+Route::group(['namespace'=>'admin','middleware' => 'guest:admin'], function () {
+    Route::get('login', 'loginController@getLogin')->name('get.admin.login');
+    Route::post('login', 'loginController@login')->name('admin.login');
+
+
 
 });// end adminlogin route
 // ################## start admin Dashboard routes ######################
 define('pagination_count',10);
 Route::group(['namespace' => 'admin','middleware' => 'auth:admin'], function () {
     Route::get('/', 'dashboardController@index')->name('admin.dashboard');
-    Route::get('logout','LoginController@logout')->name('logout');
+    Route::get('logout','loginController@logout')->name('logout');
 
 // >>>>>>>>>>>>>>>>>>>>>>>> start language route <<<<<<<<<<<<<<
 Route::group(['prefix'=>'languages'],function(){
@@ -78,7 +79,7 @@ Route::get('edite/{id}','itemsController@edite')->name('edite.item');
 
 Route::post('update/{id}','itemsController@update')->name('update.item');
 
-
+Route::get('delete/{id}','itemsController@delete')->name('delete.item');
 
 
 });//end items route

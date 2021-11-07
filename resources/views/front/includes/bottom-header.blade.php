@@ -1,8 +1,7 @@
 {{-- <!--
 Navigation Bar Section
 -->
-<div class="navbar">
-    <div class="navbar-inner">
+<div class="navbar">    <div class="navbar-inner">
         <div class="container">
             <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
                 <span class="icon-bar"></span>

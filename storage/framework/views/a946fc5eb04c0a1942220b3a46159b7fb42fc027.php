@@ -53,8 +53,9 @@ Body Section
         	<!-- Slider -->
 			<div class="block-slider block-slider4">
 				<ul class="" id="bxslider-home4">
+                    <?php if(isset($home_item)): ?>
 					<li>
-						<img src="./public/assets/front/images/h4-slide.png" alt="Slide">
+						<img src="<?php echo e($home_item->name); ?>" alt="Slide">
                         
 						<div class="caption-group">
 							<h2 class="caption title">
@@ -64,6 +65,7 @@ Body Section
 							<a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
 						</div>
 					</li>
+                    <?php endif; ?>
 					<li><img src="./public/assets/front/images/h4-slide2.png" alt="Slide">
 						<div class="caption-group">
 							<h2 class="caption title">

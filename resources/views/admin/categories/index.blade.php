@@ -65,7 +65,7 @@
                                                     {{-- <td>{{$category -> image_path}}</td> --}}
                                                     {{-- style="width: 150px; height: 100px;" --}}
                                                     <td> <img  src="{{storage_path('images'.$category-> image_path)}}" alt='{{'image of- '.$category -> name}}'></td>
-                                                    <td>5؟؟</td>
+                                                    <td>{{App\Models\item::where('category_id',$category->id)->count()}}</td>
                                                     <td>
                                                         <div class="btn-group" role="group"
                                                              aria-label="Basic example">

@@ -5,6 +5,18 @@
                <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
                            class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span></a>
                </li>
+               <li class="nav-item  open ">
+                <a href=""><i class="la la-home"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">الاعضاء </span>
+                    <span
+                        class="badge badge badge-info badge-pill float-right mr-2">{{App\Models\User::count()}}</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="??????"
+                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                    </li>
+
+                </ul>
 
                <li class="nav-item  open ">
                    <a href=""><i class="la la-home"></i>
@@ -21,6 +33,8 @@
                        </li>
                    </ul>
                </li>
+
+            </li>
 
 
                <li class="nav-item"><a href="{{route('all.categori')}}"><i class="la la-group"></i>

@@ -64,11 +64,24 @@
                         <li class="dropdown dropdown-small">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
+                                
+                                <li><a href="#">English</a></li>
+                                {{-- <li><a href="#">French</a></li>
+                                <li><a href="#">German</a></li> --}}
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-small">
+                            {{-- <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle"
+                            href="{{route('admin.dashboard')}}">
+                            <span class="key">Dashboard</span></a> --}}
+                            <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                            {{-- <ul class="dropdown-menu">
                                 <li><a href="#">English</a></li>
                                 <li><a href="#">French</a></li>
                                 <li><a href="#">German</a></li>
-                            </ul>
+                            </ul> --}}
                         </li>
+
                     </ul>
                 </div>
             </div>

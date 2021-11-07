@@ -39,7 +39,7 @@
                             </div>
                             @include('admin.includes.alerts.success')
                             @include('admin.includes.alerts.errors')
-                            <img src="./public/images/1636018394-branddd.jpg" alt="Slide">
+
                             <div class="card-content collapse show">
                                 <div class="card-body">
                                     {{-- <img src="./public/images/1636018394-branddd.jpg" alt="Slide"> --}}
@@ -49,7 +49,7 @@
                                             iPhone <span class="primary">6 <strong>Plus</strong></span>
                                         </h2> --}}
                                         {{-- <h4 class="caption subtitle">Dual SIM</h4> --}}
-                                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                                        {{-- <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a> --}}
                                     </div>
                                     <form class="form" action="{{route('update.item',$items-> id)}}"
                                           method="POST"
@@ -60,7 +60,9 @@
 
                                         <div class="form-group">
                                             <label> صوره المنتج </label>
+                                            <img src="{{public_path('images'.$items-> image_path)}}" alt="{{public_path('images'.$items-> image_path)}}">
 
+                                            <input type='hidden'  name='id' value="{{$items-> name}}">
                                             <label id="projectinput7" class="file center-block">
                                                 <span class="file-custom"></span>
                                                 <input type='file'  name='photo'>

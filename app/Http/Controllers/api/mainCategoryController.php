@@ -12,7 +12,7 @@ use App\traits\all;
 // use all;
 class mainCategoryController extends Controller
 {
-    use all;
+   /* use all;
 // ################### select data by language - api  ########################
     public function index(){
         $languages=language::select('id','name_'. app()->getlocale())-> get();
@@ -38,5 +38,5 @@ public function change_status(Request $request){
     )->update(['active'=>$request-> active]);
     return $this-> return_succes('200',' succes udate ');
 }
-// ################### login ########
+// ################### login ########*/
 }// class end

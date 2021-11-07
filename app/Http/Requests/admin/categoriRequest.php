@@ -24,7 +24,7 @@ class categoriRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'photo'=>'required',
+            'photo'=>'required_without:id',
             'name'=>'required'
             // 'abbr'=>'abbr',
 
